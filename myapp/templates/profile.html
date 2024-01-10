@@ -1,0 +1,7 @@
+<h1>Welcome, {{ user.username }}!</h1>
+<p>{{ user.userprofile.bio }}</p>
+<form method="post" action="{% url 'profile' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update Profile</button>
+</form>
